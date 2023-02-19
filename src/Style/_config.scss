@@ -1,0 +1,49 @@
+$primary-color: #071e22;
+$secondary-color: #1d7874;
+$default-btn-color: rgb(206, 185, 118);
+$button-color: #679289; 
+$icon-color: #ee2e31; 
+
+
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  }
+  @else {
+    @return #fff;
+  }
+}
+
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+.icon-add {
+  display: none;
+}
+.icon-remove,.icon-list {
+    display: none;
+}
+
+  %btn {
+    width: 200px;
+    padding: 0.5rem;
+    border: none;
+    transition: 1s;
+    margin-left: 1rem;
+    cursor: pointer;
+    &:hover{
+      @include set-background(#fff)
+    }
+  }
+  
+  .btn-primary {
+    @extend %btn;
+    @include set-background($default-btn-color)
+  }
+  .btn-secondary{
+    @extend %btn;
+    border: 0.1px solid #fff;
+    @include set-background($primary-color)
+  }

@@ -1,0 +1,18 @@
+
+
+@media (max-width: 767px) {
+  .icon-add,  .mobile-add{
+    display: block;
+  }
+  .mobile-remove{
+    display: none;
+  }
+  .upper {
+    display: none;
+  }
+  .container {
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      height: 80px;
+      width: 100%;
+  }
+}

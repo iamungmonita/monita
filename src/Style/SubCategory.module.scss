@@ -1,0 +1,13 @@
+.bg {
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px,1fr));
+  background-color: rgb(240, 143, 143);
+  width: auto;
+  p {
+    background-color: rgb(160, 76, 76);
+    padding: 1rem;
+    margin: 10px;
+    width: auto;
+  }
+}

@@ -10,7 +10,7 @@ const Sidebar = () => {
     <div>
        <div className="">
             <ul className={style.container}>
-              {categories.map((cat,index) => <li key={index}><a>{cat.title}</a> <Drop/></li>)}
+              {categories.map((cat,index) => <li key={index}><a href="#">{cat.title}</a><Drop/></li>)}
             </ul>
         </div>
     </div>

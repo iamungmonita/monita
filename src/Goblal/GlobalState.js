@@ -10,7 +10,12 @@ const initial = {
     {id: 4, title: 'Demo'},
     {id: 5, title: 'Resources'},
   ],
- 
+  subcategories: [
+    {id: 1, title: 'Service', description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
+    {id: 2, title: 'Sale'},
+    {id: 3, title: 'Platform'},
+    {id: 4, title: 'Market Place', description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit.'}
+  ]
 }
 
 export const GlobalState = createContext(initial)
@@ -18,16 +23,13 @@ export const GlobalState = createContext(initial)
 export const GlobalProvider = ({children}) => {
   const [state, dispatch] = useReducer(AppReducer, initial)
 
-  function showScreen()  {
-    dispatch({
-      type: 'SHOW',
-    })
-  }
+
 
   return (
     <GlobalState.Provider value={{
       categories: state.categories,
-      showScreen
+      subcategories: state.subcategories,
+      
     }}>
       {children}
     </GlobalState.Provider>

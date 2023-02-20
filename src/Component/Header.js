@@ -4,6 +4,7 @@ import list from '/Users/ungmonita/my-website/src/Icons/icon-list.svg'
 import remove from '/Users/ungmonita/my-website/src/Icons/icon-remove.svg'
 import Sidebar from './Sidebar'
 import { GlobalState } from '../Goblal/GlobalState'
+import SubCategory from './SubCategory'
 
 const Header = () => {
   const [screen, setScreen] = useState(window.innerWidth)
@@ -18,7 +19,8 @@ const Header = () => {
 
   const {categories} = useContext(GlobalState)
 
-  
+ 
+ 
   const show = () => {
     const cross = document.querySelector('.icon-cross');
     const sidebar = document.querySelector('.sidebar');
@@ -34,6 +36,7 @@ const Header = () => {
     const cross = document.querySelector('.icon-cross');
     const list = document.querySelector('.icon-list');
     const sidebar = document.querySelector('.sidebar');
+    
     cross.classList.add('icon-remove');
     cross.classList.remove('icon-add');
     sidebar.classList.add('icon-remove');
@@ -42,6 +45,9 @@ const Header = () => {
     list.classList.add('mobile-add');
     console.log(cross.classList);
   }
+
+
+
   return (
 
     <div className='container'>
@@ -63,13 +69,14 @@ const Header = () => {
 
           <div className="mobile-remove">
               <ul className={style.list}>
-              {categories.map((cat,index) => <li key={index}><a>{cat.title}</a></li>)}
+              {categories.map((category,index) => <li key={index}><a href="#">{category.title}</a></li>)}
+             
               </ul>
           </div>
         
           <div className='mobile-remove'>
             <div className={style.btn}> 
-              <button className='btn-primary remove-mobile'>Start Free Trail</button>
+              <button className='btn-primary remove-mobile' >Start Free Trail</button>
               <button className='btn-secondary tablet-remove'>Contact Us</button>
             </div>
           </div>
@@ -77,10 +84,10 @@ const Header = () => {
         <div className="sidebar icon-remove">
           <Sidebar/>
         </div>
-        <div>
-          {screen}
+        <div className={style.sub}>
+          <SubCategory />
         </div>
-        
+    
         </div>
     </div>
   )

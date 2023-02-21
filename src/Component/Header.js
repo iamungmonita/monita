@@ -6,15 +6,7 @@ import Sidebar from './Sidebar'
 import { GlobalState } from '../Goblal/GlobalState'
 
 const Header = () => {
-  const [screen, setScreen] = useState(window.innerWidth)
 
-    useEffect(() => {
-      window.addEventListener('resize', handleScreen)
-    })
-
-  const handleScreen = () => {
-    setScreen(window.innerWidth)
-  }
 
   const {categories} = useContext(GlobalState)
 
@@ -77,9 +69,7 @@ const Header = () => {
         <div className="sidebar icon-remove">
           <Sidebar/>
         </div>
-        <div>
-          {screen}
-        </div>
+     
         
         </div>
     </div>

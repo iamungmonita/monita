@@ -4,7 +4,8 @@ import list from '/Users/ungmonita/my-website/src/Icons/icon-list.svg'
 import remove from '/Users/ungmonita/my-website/src/Icons/icon-remove.svg'
 import Sidebar from './Sidebar'
 import { GlobalState } from '../Goblal/GlobalState'
-
+import {Route, Routes, Link } from 'react-router-dom'
+import Login from './Login'
 const Header = () => {
 
 
@@ -40,7 +41,7 @@ const Header = () => {
       <div className={style.container}> 
         <div className="upper">
           <nav className={style.upper}>
-            <li><a href="#">Sign In</a></li>
+            <li>   <Link to='/Login'>Login</Link>  </li>
             <li><a href="#">Product support</a></li>
             <li><a href="#">Company</a></li>
             <li><a href="#">Contact us</a></li>
@@ -69,8 +70,9 @@ const Header = () => {
         <div className="sidebar icon-remove">
           <Sidebar/>
         </div>
+  
+       
      
-        
         </div>
     </div>
   )

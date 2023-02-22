@@ -1,6 +1,49 @@
-.bg {
-  background-color: red;
+@import 'config';
+
+.login {
+  top: 100px;
+  position: relative;
+  max-width: 550px;
+  text-align: left;
+  background: rgba($color: #000000, $alpha: 0.5);
+  padding: 1rem 1rem 5rem;
+  height: auto ;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 0.1px solid #fff;
+  h2 {
+    text-align: center;
+    margin: 1rem 1rem 2rem;;
+  }
+  form{
+    width: 80%;
+    margin: 0 auto;
+  }
+  input {
+  
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    margin: 10px 0;
+    &:focus {
+      border: 2px solid $primary-color;
+    }
+  }
 }
-.green {
-  color: green;
+.url {
+  display: grid;
+  grid-template-columns: 1fr;
+
+}
+.right {
+  text-align: right;
+  font-size: 12px;
+}
+.border {
+  border: 0.1px solid #fff;
+}
+@media (max-width: 767px) {
+  .login {
+    top: 80px;
+  }
 }

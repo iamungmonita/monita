@@ -6,7 +6,6 @@ const Login = () => {
   return (
     <div className={ `bg  ${style.green}` }>
       <h2>Login</h2>
-          
       <Link to='/Register'>Register</Link>   
     </div>
   )

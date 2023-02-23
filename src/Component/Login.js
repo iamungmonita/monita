@@ -2,6 +2,7 @@ import React from 'react'
 import style from '/Users/ungmonita/my-website/src/Style/Login.module.scss'
 import { Link } from 'react-router-dom'
 import { useRef } from 'react'
+
 const Login = () => {
 const inputRef = useRef()
   const submit = (e) => {
@@ -9,6 +10,7 @@ const inputRef = useRef()
     console.log(inputRef.current.value);
     inputRef.current.value = ''
   }
+  
   return (
    <div className="login">
       <div className={ `${style.login} login` }>
